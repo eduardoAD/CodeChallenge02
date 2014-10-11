@@ -61,6 +61,7 @@
     City *city  = [self.statesArray objectAtIndex:indexPath.row];
     cell.textLabel.text = city.name;
     cell.detailTextLabel.text = city.state;
+    cell.imageView.image = city.image;
     
     return cell;
 }
