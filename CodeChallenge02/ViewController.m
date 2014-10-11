@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "City.h"
+#import "CityViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -16,12 +18,67 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.statesArray = [[NSMutableArray alloc] init];
+
+    City *morelia = [[City alloc]initWithName:@"Morelia" state:@"Michoacan" url:@"http://es.wikipedia.org/wiki/Morelia"];
+
+    City *monterrey = [[City alloc]initWithName:@"Monterrey" state:@"Nuevo Leon" url:@"http://es.wikipedia.org/wiki/Monterrey"];
+
+    City *guadalajara = [[City alloc]initWithName:@"Guadalajara" state:@"Jalisco" url:@"http://es.wikipedia.org/wiki/Guadalajara_(Mexico)"];
+
+    City *cancun = [[City alloc]initWithName:@"Cancun" state:@"Quintana Roo" url:@"http://es.wikipedia.org/wiki/Cancun"];
+
+    self.statesArray = [NSMutableArray arrayWithObjects:monterrey, guadalajara, cancun, morelia, nil];
+
+    UISwipeGestureRecognizer *recognizerLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    [recognizerLeft setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.myTableView addGestureRecognizer:recognizerLeft];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.statesArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"stateCell" forIndexPath:indexPath];
+
+    City *city  = [self.statesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = city.name;
+    cell.detailTextLabel.text = city.state;
+    
+    return cell;
+}
+
+- (void) handleSwipe: (UISwipeGestureRecognizer *)gestureRecognizer {
+    CGPoint location = [gestureRecognizer locationInView:self.myTableView];
+    NSIndexPath *indexPath = [self.myTableView indexPathForRowAtPoint:location];
+    if(indexPath){
+        City *citySelected = [self.statesArray objectAtIndex:indexPath.row];
+        if (gestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft){
+            [self.statesArray removeObject:citySelected];
+        }
+
+        [self.myTableView reloadData];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetailCity"]) {
+        CityViewController *destinationViewController = segue.destinationViewController;
+
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        City *citySelected = [self.statesArray objectAtIndex:indexPath.row];
+
+        destinationViewController.city = citySelected;
+    }
+}
+
+- (void) didMoveToParentViewController:(UIViewController *)parent{
+    [self.myTableView reloadData];
 }
 
 @end

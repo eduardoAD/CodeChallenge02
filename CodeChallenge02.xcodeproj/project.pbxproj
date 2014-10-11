@@ -14,6 +14,9 @@
 		E4294E1319E82E5400895CCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4294E1219E82E5400895CCC /* Images.xcassets */; };
 		E4294E1619E82E5400895CCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4294E1419E82E5400895CCC /* LaunchScreen.xib */; };
 		E4294E2219E82E5400895CCC /* CodeChallenge02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4294E2119E82E5400895CCC /* CodeChallenge02Tests.m */; };
+		E4294E2D19E82E8200895CCC /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E4294E2C19E82E8200895CCC /* City.m */; };
+		E4294E3019E8377700895CCC /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4294E2F19E8377700895CCC /* CityViewController.m */; };
+		E4294E3319E84E4300895CCC /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4294E3219E84E4300895CCC /* WikiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		E4294E1B19E82E5400895CCC /* CodeChallenge02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4294E2019E82E5400895CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4294E2119E82E5400895CCC /* CodeChallenge02Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeChallenge02Tests.m; sourceTree = "<group>"; };
+		E4294E2B19E82E8200895CCC /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		E4294E2C19E82E8200895CCC /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		E4294E2E19E8377700895CCC /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		E4294E2F19E8377700895CCC /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		E4294E3119E84E4300895CCC /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
+		E4294E3219E84E4300895CCC /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +94,16 @@
 				E4294E0A19E82E5400895CCC /* AppDelegate.m */,
 				E4294E0C19E82E5400895CCC /* ViewController.h */,
 				E4294E0D19E82E5400895CCC /* ViewController.m */,
+				E4294E2B19E82E8200895CCC /* City.h */,
+				E4294E2C19E82E8200895CCC /* City.m */,
 				E4294E0F19E82E5400895CCC /* Main.storyboard */,
+				E4294E2E19E8377700895CCC /* CityViewController.h */,
+				E4294E2F19E8377700895CCC /* CityViewController.m */,
 				E4294E1219E82E5400895CCC /* Images.xcassets */,
 				E4294E1419E82E5400895CCC /* LaunchScreen.xib */,
 				E4294E0519E82E5400895CCC /* Supporting Files */,
+				E4294E3119E84E4300895CCC /* WikiViewController.h */,
+				E4294E3219E84E4300895CCC /* WikiViewController.m */,
 			);
 			path = CodeChallenge02;
 			sourceTree = "<group>";
@@ -221,6 +236,9 @@
 			files = (
 				E4294E0E19E82E5400895CCC /* ViewController.m in Sources */,
 				E4294E0B19E82E5400895CCC /* AppDelegate.m in Sources */,
+				E4294E3319E84E4300895CCC /* WikiViewController.m in Sources */,
+				E4294E3019E8377700895CCC /* CityViewController.m in Sources */,
+				E4294E2D19E82E8200895CCC /* City.m in Sources */,
 				E4294E0819E82E5400895CCC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
