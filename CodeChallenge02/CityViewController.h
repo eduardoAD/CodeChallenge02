@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *cityNameText;
 @property (strong, nonatomic) IBOutlet UITextField *cityStateText;
 @property (strong, nonatomic) IBOutlet UILabel *cityWikiLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *cityImage;
 
 @property (strong, nonatomic) City *city;
 @property BOOL editButtonToggled;

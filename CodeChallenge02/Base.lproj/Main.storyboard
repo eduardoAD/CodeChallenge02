@@ -167,6 +167,12 @@
                                     <outletCollection property="gestureRecognizers" destination="6ab-15-p7e" appends="YES" id="6mT-dl-vXw"/>
                                 </connections>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFe-9g-M1L">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="189" width="240" height="128"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -177,6 +183,7 @@
                                 <exclude reference="HpU-nI-FhL"/>
                                 <exclude reference="6dy-Nl-uTE"/>
                                 <exclude reference="RJI-na-D1q"/>
+                                <exclude reference="dFe-9g-M1L"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -187,10 +194,12 @@
                                 <include reference="HpU-nI-FhL"/>
                                 <include reference="6dy-Nl-uTE"/>
                                 <include reference="RJI-na-D1q"/>
+                                <include reference="dFe-9g-M1L"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cityImage" destination="dFe-9g-M1L" id="81s-Uo-z52"/>
                         <outlet property="cityNameLabel" destination="XSy-Gd-w8x" id="wLE-Id-weg"/>
                         <outlet property="cityNameText" destination="GC1-ns-OnO" id="mBH-Lt-bmi"/>
                         <outlet property="cityStateLabel" destination="uBc-Fp-JqD" id="d8Z-fa-KOp"/>

@@ -25,6 +25,8 @@
     self.cityStateText.text = self.city.state;
     self.cityStateText.hidden = YES;
 
+    self.cityImage.image = self.city.image;
+
     self.editButtonToggled = NO;
 }
 

@@ -10,11 +10,12 @@
 
 @implementation City
 
-- (id) initWithName: (NSString *)c_name state:(NSString *)c_state url:(NSString *)c_url{
+- (id) initWithName: (NSString *)c_name state:(NSString *)c_state url:(NSString *)c_url image:(UIImage *)c_image{
     if (self = [super init]) {
         [self setName:c_name];
         [self setState:c_state];
         [self setUrl:c_url];
+        [self setImage:c_image];
     }
     return self;
 }

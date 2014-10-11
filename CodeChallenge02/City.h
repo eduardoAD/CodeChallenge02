@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Globant. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface City : NSObject
 @property NSString *name;
 @property NSString *state;
 @property NSString *url;
+@property UIImage *image;
 
-- (id) initWithName: (NSString *)c_name state:(NSString *)c_state url:(NSString *)c_url;
+- (id) initWithName: (NSString *)c_name state:(NSString *)c_state url:(NSString *)c_url image:(UIImage *)c_image;
 @end

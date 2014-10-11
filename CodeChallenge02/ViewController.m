@@ -20,13 +20,25 @@
     [super viewDidLoad];
     self.statesArray = [[NSMutableArray alloc] init];
 
-    City *morelia = [[City alloc]initWithName:@"Morelia" state:@"Michoacan" url:@"http://es.wikipedia.org/wiki/Morelia"];
+    City *morelia = [[City alloc]initWithName:@"Morelia"
+                                        state:@"Michoacan"
+                                          url:@"http://es.wikipedia.org/wiki/Morelia"
+                                        image:[UIImage imageNamed:@"morelia"]];
 
-    City *monterrey = [[City alloc]initWithName:@"Monterrey" state:@"Nuevo Leon" url:@"http://es.wikipedia.org/wiki/Monterrey"];
+    City *monterrey = [[City alloc]initWithName:@"Monterrey"
+                                          state:@"Nuevo Leon"
+                                            url:@"http://es.wikipedia.org/wiki/Monterrey"
+                                          image:[UIImage imageNamed:@"monterrey"]];
 
-    City *guadalajara = [[City alloc]initWithName:@"Guadalajara" state:@"Jalisco" url:@"http://es.wikipedia.org/wiki/Guadalajara_(Mexico)"];
+    City *guadalajara = [[City alloc]initWithName:@"Guadalajara"
+                                            state:@"Jalisco"
+                                              url:@"http://es.wikipedia.org/wiki/Guadalajara_(Mexico)"
+                                            image:[UIImage imageNamed:@"guadalajara"]];
 
-    City *cancun = [[City alloc]initWithName:@"Cancun" state:@"Quintana Roo" url:@"http://es.wikipedia.org/wiki/Cancun"];
+    City *cancun = [[City alloc]initWithName:@"Cancun"
+                                       state:@"Quintana Roo"
+                                         url:@"http://es.wikipedia.org/wiki/Cancun"
+                                       image:[UIImage imageNamed:@"cancun"]];
 
     self.statesArray = [NSMutableArray arrayWithObjects:monterrey, guadalajara, cancun, morelia, nil];
 
